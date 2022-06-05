@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "fs:read": "node ./src/fs/read.js",
-    "fs:create": "node ./src/fs/create.js"
+    "fs:create": "node ./src/fs/create.js",
+    "fs:delete": "node ./src/fs/delete.js"
   },
   "repository": {
     "type": "git",
