@@ -1,12 +1,8 @@
-import * as path from 'path';
 import { readFile } from 'fs';
-import { fileURLToPath } from 'url';
+import { resolvePath } from './resolvePath.js';
 
 export const read = async () => {
-    const dirname = path.dirname(fileURLToPath(import.meta.url));
-    const filesDirPath = path.join(dirname, './files');
-
-    const filePath = path.resolve(filesDirPath, "fileToRead.txt");    
+    const filePath = resolvePath("fileToRead.txt");    
 
     readFile(filePath, 'utf8', (err, data) => {
         try {
